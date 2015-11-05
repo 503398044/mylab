@@ -35,6 +35,9 @@ class PostsController < ApplicationController
 	end
 
 	def destory
+		@post = Post.find(params[:id])
+		@post.destory
+		redirect_to posts_path
 	end
 
 end
